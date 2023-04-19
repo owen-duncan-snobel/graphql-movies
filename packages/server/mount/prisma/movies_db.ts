@@ -82,7 +82,7 @@ export const movies_db = {
               "Comedy",
               "Family"
           ],
-          "director": "Brad Bird, Jan Pinkava",
+          "director": "Brad Bird",
           
           "plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
           
@@ -96,7 +96,7 @@ export const movies_db = {
               "Crime",
               "Drama"
           ],
-          "director": "Fernando Meirelles, Kátia Lund",
+          "director": "Fernando Meirelles",
           
           "plot": "Two boys growing up in a violent neighborhood of Rio de Janeiro take different paths: one becomes a photographer, the other a drug dealer.",
           
@@ -125,7 +125,7 @@ export const movies_db = {
               "Comedy",
               "Drama"
           ],
-          "director": "Olivier Nakache, Eric Toledano",
+          "director": "Olivier Nakache",
           
           "plot": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
           
@@ -184,24 +184,9 @@ export const movies_db = {
               "Drama",
               "Thriller"
           ],
-          "director": "Ethan Coen, Joel Coen",
+          "director": "Ethan Coen",
           
           "plot": "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",
-          
-      },
-      {
-          
-          "title": "Planet 51",
-          "year": "2009",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Jorge Blanco, Javier Abad, Marcos Martínez",
-          
-          "plot": "An alien civilization is invaded by Astronaut Chuck Baker, who believes that the planet was uninhabited. Wanted by the military, Baker must get back to his ship before it goes into orbit without him.",
           
       },
       {
@@ -217,21 +202,6 @@ export const movies_db = {
           "director": "Rian Johnson",
           
           "plot": "In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits - someone like Joe - who one day learns the mob wants to 'close the loop' by sending back Joe's future self for assassination.",
-          
-      },
-      {
-          
-          "title": "Corpse Bride",
-          "year": "2005",
-          
-          "genres": [
-              "Animation",
-              "Drama",
-              "Family"
-          ],
-          "director": "Tim Burton, Mike Johnson",
-          
-          "plot": "When a shy groom practices his wedding vows in the inadvertent presence of a deceased young woman, she rises from the grave assuming he has married her.",
           
       },
       {
@@ -773,7 +743,7 @@ export const movies_db = {
               "Drama",
               "Romance"
           ],
-          "director": "Danny Boyle, Loveleen Tandan",
+          "director": "Danny Boyle",
           
           "plot": "A Mumbai teen reflects on his upbringing in the slums when he is accused of cheating on the Indian Version of \"Who Wants to be a Millionaire?\"",
           
@@ -838,36 +808,6 @@ export const movies_db = {
       },
       {
           
-          "title": "Madagascar: Escape 2 Africa",
-          "year": "2008",
-          
-          "genres": [
-              "Animation",
-              "Action",
-              "Adventure"
-          ],
-          "director": "Eric Darnell, Tom McGrath",
-          
-          "plot": "The animals try to fly back to New York City, but crash-land on an African wildlife refuge, where Alex is reunited with his parents.",
-          
-      },
-      {
-          
-          "title": "Despicable Me 2",
-          "year": "2013",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Pierre Coffin, Chris Renaud",
-          
-          "plot": "When Gru, the world's most super-bad turned super-dad has been recruited by a team of officials to stop lethal muscle and a host of Gru's own, He has to fight back with new gadgetry, cars, and more minion madness.",
-          
-      },
-      {
-          
           "title": "Downfall",
           "year": "2004",
           
@@ -879,36 +819,6 @@ export const movies_db = {
           "director": "Oliver Hirschbiegel",
           
           "plot": "Traudl Junge, the final secretary for Adolf Hitler, tells of the Nazi dictator's final days in his Berlin bunker at the end of WWII.",
-          
-      },
-      {
-          
-          "title": "Madagascar",
-          "year": "2005",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Eric Darnell, Tom McGrath",
-          
-          "plot": "Spoiled by their upbringing with no idea what wild life is really like, four animals from New York Central Zoo escape, unwittingly assisted by four absconding penguins, and find themselves in Madagascar, among a bunch of merry lemurs",
-          
-      },
-      {
-          
-          "title": "Madagascar 3: Europe's Most Wanted",
-          "year": "2012",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Eric Darnell, Tom McGrath, Conrad Vernon",
-          
-          "plot": "Alex, Marty, Gloria and Melman are still fighting to get home to their beloved Big Apple. Their journey takes them through Europe where they find the perfect cover: a traveling circus, which they reinvent - Madagascar style.",
           
       },
       {
@@ -1415,20 +1325,6 @@ export const movies_db = {
       },
       {
           
-          "title": "Cloud Atlas",
-          "year": "2012",
-          
-          "genres": [
-              "Drama",
-              "Sci-Fi"
-          ],
-          "director": "Tom Tykwer, Lana Wachowski, Lilly Wachowski",
-          
-          "plot": "An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.",
-          
-      },
-      {
-          
           "title": "The Impossible",
           "year": "2012",
           
@@ -1718,35 +1614,6 @@ export const movies_db = {
       },
       {
           
-          "title": "Shrek 2",
-          "year": "2004",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Andrew Adamson, Kelly Asbury, Conrad Vernon",
-          
-          "plot": "Princess Fiona's parents invite her and Shrek to dinner to celebrate her marriage. If only they knew the newlyweds were both ogres.",
-          
-      },
-      {
-          
-          "title": "Sin City",
-          "year": "2005",
-          
-          "genres": [
-              "Crime",
-              "Thriller"
-          ],
-          "director": "Frank Miller, Robert Rodriguez, Quentin Tarantino",
-          
-          "plot": "A film that explores the dark and miserable town, Basin City, and tells the story of three different people, all caught up in violent corruption.",
-          
-      },
-      {
-          
           "title": "Nebraska",
           "year": "2013",
           
@@ -1758,21 +1625,6 @@ export const movies_db = {
           "director": "Alexander Payne",
           
           "plot": "An aging, booze-addled father makes the trip from Montana to Nebraska with his estranged son in order to claim a million-dollar Mega Sweepstakes Marketing prize.",
-          
-      },
-      {
-          
-          "title": "Shrek",
-          "year": "2001",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Andrew Adamson, Vicky Jenson",
-          
-          "plot": "After his swamp is filled with magical creatures, an ogre agrees to rescue a princess for a villainous lord in order to get his land back.",
           
       },
       {
@@ -1832,21 +1684,6 @@ export const movies_db = {
           "director": "Richard Linklater",
           
           "plot": "We meet Jesse and Celine nine years on in Greece. Almost two decades have passed since their first meeting on that train bound for Vienna.",
-          
-      },
-      {
-          
-          "title": "Despicable Me",
-          "year": "2010",
-          
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Comedy"
-          ],
-          "director": "Pierre Coffin, Chris Renaud",
-          
-          "plot": "When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better.",
           
       },
       {
@@ -1963,21 +1800,6 @@ export const movies_db = {
           "director": "James Marsh",
           
           "plot": "A look at the relationship between the famous physicist Stephen Hawking and his wife.",
-          
-      },
-      {
-          
-          "title": "Shogun",
-          "year": "1980",
-          
-          "genres": [
-              "Adventure",
-              "Drama",
-              "History"
-          ],
-          "director": "N/A",
-          
-          "plot": "A English navigator becomes both a player and pawn in the complex political games in feudal Japan.",
           
       },
       {
