@@ -37,7 +37,7 @@ const startServer = async () => {
 
   app.use("/graphql", expressMiddleware(server, {
     context: async ({req, res}: {req: Request, res: Response}) => {
-      const token = req.headers.authorization || ''
+      const token = req.headers.authorization?.slice(7) || '' // remove Bearer from the token
       const user = await getUserWithToken(token)
       return { user }
      }
