@@ -13,6 +13,7 @@ const resolvers: IResolvers = {
   Mutation: {
     ...userResolver.Mutation,
     ...movieResolver.Mutation,
+    ...directorResolver.Mutation
   }
 }
 

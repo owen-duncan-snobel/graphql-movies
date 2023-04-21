@@ -5,11 +5,11 @@ import { Context } from "./user.resolver"
 
 const IdSchema = z.coerce.number().positive()
 
-const MovieSchema = z.object({
+export const MovieSchema = z.object({
   name: z.string().min(3).max(255),
   description: z.string().min(0).max(255),
   director_id: z.number().optional(),
-  release_date: z.coerce.date().optional(),
+  release_date: z.coerce.date(),
 })
 
 const FilterInputs = z.object({
@@ -26,8 +26,8 @@ const GetMovieSchema = z.object({
 const GetMoviesSchema = z.object({
   filter: FilterInputs.optional(),
   orderBy: z.object({}).optional(),
-  skip: z.number().optional(),
-  take: z.number().optional(),
+  offset: z.number().optional(),
+  limit: z.number().optional(),
 })
 
 const UpdateMovieSchema = z.object({
@@ -35,9 +35,10 @@ const UpdateMovieSchema = z.object({
   name: z.string().min(3).max(255).optional(),
   description: z.string().min(0).max(255).optional(),
   director_id: z.number().optional(),
-  release_date: z.coerce.date().optional(),
+  release_date: z.coerce.date(),
 })
 
+export type CreateMovieInputs = z.infer<typeof MovieSchema>
 export type GetMovieInputs = z.infer<typeof GetMovieSchema>
 export type GetMoviesInputs = z.infer<typeof GetMoviesSchema>
 export type UpdateMovieInputs = z.infer<typeof UpdateMovieSchema>
@@ -59,7 +60,7 @@ export const movieResolver = {
     createMovie: async (_: any, {name, description, director_id, release_date}: Record<string, any>) => {
       const validateInputs = MovieSchema.safeParse({name, description, director_id, release_date})
       if (!validateInputs.success) throw new GraphQLError('Invalid inputs')
-      return await createMovie(name, description, director_id, release_date)
+      return await createMovie({ name, description, director_id, release_date })
     },
     deleteMovieById: async (_: any, { id }: Record<string, any>, context: Context) => {
       if (!context || !context.user) throw new GraphQLError('Unauthorized access')

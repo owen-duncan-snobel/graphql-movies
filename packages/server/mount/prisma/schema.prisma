@@ -24,7 +24,7 @@ model Movie {
   description   String
   director      Director  @relation(fields: [director_id], references: [id])
   director_id   Int
-  release_date  DateTime 
+  release_date  DateTime
   created_at    DateTime @default(now())
   updated_at    DateTime @default(now())
 }

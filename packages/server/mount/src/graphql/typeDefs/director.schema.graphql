@@ -8,3 +8,13 @@ type Query {
   director(id: Int!): Director
   directors: [Director]!
 }
+
+input MovieInput {
+  name: String!
+  description: String!
+  release_date: String!
+}
+
+type Mutation {
+  createDirector(name: String!, movies: [MovieInput]): Director
+}

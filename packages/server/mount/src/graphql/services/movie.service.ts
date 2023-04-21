@@ -46,15 +46,25 @@ export const getMovies = async (args: GetMoviesInputs) => {
         AND: andWhere
       },
       orderBy,
-      skip: args.skip,
-      take: args.take
+      skip: args.offset,
+      take: args.limit
     })
   } catch(err: any){
     throw new GraphQLError('Unable to get movies')
   }
 }
 
-export const createMovie = async (name: string, description: string, director_id: number, release_date: string) => {
+export const createMovie = async ({
+  name,
+  description,
+  director_id,
+  release_date
+}: {
+  name: string,
+  description: string,
+  director_id: number,
+  release_date: string
+}) => {
   try {
     return await prisma.movie.create({
       data: {

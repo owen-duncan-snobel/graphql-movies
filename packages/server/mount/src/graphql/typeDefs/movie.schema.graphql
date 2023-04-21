@@ -29,7 +29,7 @@ enum Sort {
 
 type Query {
   movie(filter: LinkFilter): Movie 
-  movies(filter: LinkFilter, skip: Int, take: Int, orderBy: LinkOrderByInput): [Movie]!
+  movies(filter: LinkFilter, offset: Int, limit: Int, orderBy: LinkOrderByInput): [Movie]!
 }
 
 type Mutation {
