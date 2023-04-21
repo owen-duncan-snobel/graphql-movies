@@ -1,0 +1,10 @@
+type Director {
+  id: Int!
+  name: String!
+  movies: [Movie]
+}
+
+type Query {
+  director(id: Int!): Director
+  directors: [Director]!
+}

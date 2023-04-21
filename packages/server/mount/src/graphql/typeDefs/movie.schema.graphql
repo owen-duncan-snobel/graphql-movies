@@ -1,0 +1,14 @@
+type Movie {
+  id: Int!
+  name: String!
+  description: String!
+  director_id: Int!
+  release_date: String!
+  created_at: String!
+  updated_at: String!
+}
+
+type Query {
+  movie(id: Int!): Movie 
+  movies: [Movie]!
+}

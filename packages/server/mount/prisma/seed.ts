@@ -1,7 +1,5 @@
-import { PrismaClient, Prisma } from '@prisma/client'
+import prisma from '../src/libs/prisma/client'
 import { movies_db } from './movies_db'
-
-const prisma = new PrismaClient()
 
 async function main(){
   const movies = movies_db.movies.map(movie => {
