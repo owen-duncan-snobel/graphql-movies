@@ -9,6 +9,7 @@ export const getMovie = async (id: number) => {
       }
     })
   } catch (err: any){
+    if (err.code === 'P2025') throw new GraphQLError('Movie does not exist')
     throw new GraphQLError('Unable to get movie')
   }
 }
@@ -36,5 +37,18 @@ export const createMovie = async (name: string, description: string, director_id
     if (err.code === 'P2002') throw new GraphQLError('Movie already exists')
     if (err.code === 'P2025') throw new GraphQLError('Director does not exist')
     throw new GraphQLError('Unable to create movie')
+  }
+}
+
+export const deleteMovieById = async (id: number) => {
+  try {
+    return await prisma.movie.delete({
+      where: {
+        id
+      }
+    })
+  } catch (err: any){
+    if (err.code === 'P2025') throw new GraphQLError('Movie does not exist')
+    throw new GraphQLError('Unable to delete movie')
   }
 }

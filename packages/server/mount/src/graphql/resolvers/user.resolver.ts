@@ -20,7 +20,7 @@ const UpdatePasswordSchema = z.object({
   new_password: z.string().min(5).max(255)
 })
 
-interface Context {
+export interface Context {
   user: {
     id: string
     email: string
@@ -60,10 +60,12 @@ export const userResolver = {
       return { token }
     },
     updatePassword: async (_: any, { old_password, new_password }: Record<string, string>, context: Context) => {
-      if (!context || !context.user) throw new GraphQLError('Unauthorized access, please login')
+      if (!context || !context.user) throw new GraphQLError('Unauthorized access')
       const { id } = context.user
+
       const validateInputs = await UpdatePasswordSchema.safeParse({ id, old_password, new_password })
       if (!validateInputs.success) throw new GraphQLError('Invalid inputs')
+
       const user = await updatePassword({ id: +id, old_password, new_password })
       if (!user) throw new GraphQLError('Unable to update password for user')
       return 'Password updated successfully'

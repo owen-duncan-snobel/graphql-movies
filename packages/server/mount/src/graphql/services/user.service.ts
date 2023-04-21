@@ -4,8 +4,6 @@ import bcrypt from 'bcryptjs'
 import { generateHashedPassword, verifyAccessToken, verifyPassword } from "../utils/auth"
 import { JwtPayload } from "jsonwebtoken"
 
-const SALT_ROUNDS = 10
-
 export const getUserWithToken = async (token: string) => {
   try {
     const payload = await verifyAccessToken(token) as JwtPayload
@@ -83,8 +81,10 @@ export const updatePassword = async ({id, old_password, new_password}: {id: numb
       }
     })
     if (!user) throw new GraphQLError('User not found')
+
     const isMatch = await verifyPassword({ password: old_password, hash: user.password })
     if (!isMatch) throw new GraphQLError('Invalid credentials')
+
     const hash = await generateHashedPassword(new_password)
     return await prisma.user.update({
       where: {
