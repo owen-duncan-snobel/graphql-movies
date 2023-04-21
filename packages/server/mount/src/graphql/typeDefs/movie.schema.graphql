@@ -12,3 +12,7 @@ type Query {
   movie(id: Int!): Movie 
   movies: [Movie]!
 }
+
+type Mutation {
+  createMovie(name: String!, description: String!, director_id: Int!, release_date: String!): Movie
+}

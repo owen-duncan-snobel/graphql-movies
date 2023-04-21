@@ -2,19 +2,23 @@ import prisma from "../../libs/prisma/client"
 
 export const directorResolver = {
   Query: {
-    movie: async (_: any, args: Record<string, any>) => {
-      return await prisma.movie.findFirst({
+    director: async (_: any, args: Record<string, any>) => {
+      return await prisma.director.findFirst({
         where: {
           id: +args.id
+        },
+        include: {
+          movies: true
         }
       })
     },
-    movies: async (_: any, args: Record<string, any>) => {
-      return await prisma.movie.findMany()
+    directors: async (_: any, args: Record<string, any>) => {
+      return await prisma.director.findMany({
+        include: {
+          movies: true
+        }
+      })
     },
   },
-  Mutation: {
-    
-  }
 }
 export default directorResolver

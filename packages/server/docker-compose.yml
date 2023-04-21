@@ -9,9 +9,10 @@ services:
     ports:
       - 4000:4000
     environment:
-      - DATABASE_URL=${DATABASE_URL}
       - REDIS_URL=${REDIS_URL}
+      - DATABASE_URL=${DATABASE_URL}
       - PORT=4000
+      - TOKEN_SECRET=${TOKEN_SECRET}
     depends_on:
       - redis
       - postgres
@@ -26,6 +27,7 @@ services:
   postgres:
     image: postgres
     container_name: postgres
+    restart: always
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -33,3 +35,5 @@ services:
       - '5432:5432'
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
+    expose:
+      - '5432'

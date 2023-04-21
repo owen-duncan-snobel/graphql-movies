@@ -1,7 +1,23 @@
+type AuthPayload {
+  token: String!
+}
+
 type User {
   id: Int!
   username: String!
   password: String!
   email: String!
+}
+
+# input UserInput {
+#   username: String!
+#   password: String!
+#   email: String!
+# }
+
+type Mutation {
+  register(username: String!, password: String!, email: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  updatePassword(old_password: String!, new_password: String!): String!
 }
 
