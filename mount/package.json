@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "watch": "prisma migrate deploy && nodemon --files src/server.ts",
+    "watch": "prisma generate && prisma migrate deploy && nodemon --files src/server.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "tsc",
