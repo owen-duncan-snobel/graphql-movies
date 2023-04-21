@@ -1,5 +1,6 @@
 
 ## Installation
+Git clone this repository, ```https://github.com/owen-duncan-snobel/graphql-movies.git```
 run ```docker-compose up --build``` from the root of the ```server/``` folder
 
 ## Run migrations
