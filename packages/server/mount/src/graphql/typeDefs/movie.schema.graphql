@@ -8,12 +8,33 @@ type Movie {
   updated_at: String!
 }
 
+input LinkFilter {
+  id: Int
+  name: String
+  description: String
+  release_date: String
+}
+
+input LinkOrderByInput {
+  id: Sort
+  name: Sort
+  description: Sort
+  release_date: Sort
+}
+
+enum Sort {
+  asc
+  desc
+}
+
 type Query {
-  movie(id: Int!): Movie 
-  movies: [Movie]!
+  movie(filter: LinkFilter): Movie 
+  movies(filter: LinkFilter, skip: Int, take: Int, orderBy: LinkOrderByInput): [Movie]!
 }
 
 type Mutation {
   createMovie(name: String!, description: String!, director_id: Int!, release_date: String!): Movie!
   deleteMovieById(id: Int!): String!
+  updateMovieById(id: Int!, name: String, description: String, director_id: Int, release_date: String): Movie!
 }
+
