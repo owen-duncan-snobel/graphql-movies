@@ -46,4 +46,5 @@ Dates returned from the server are in epoch milliseconds as a String
 
 1. Continue Unit + Integration tests for the services + resolvers
 2. Set up mocking for prisma + graphql 
+3. Postman collection for the queries and mutations
 
