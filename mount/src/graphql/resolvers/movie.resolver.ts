@@ -57,7 +57,8 @@ export const movieResolver = {
     },
   },
   Mutation: {
-    createMovie: async (_: any, {name, description, director_id, release_date}: Record<string, any>) => {
+    createMovie: async (_: any, {name, description, director_id, release_date}: Record<string, any>, context: Context) => {
+      if (!context || !context.user) throw new GraphQLError('Unauthorized access')
       const validateInputs = MovieSchema.safeParse({name, description, director_id, release_date})
       if (!validateInputs.success) throw new GraphQLError('Invalid inputs')
       return await createMovie({ name, description, director_id, release_date })
