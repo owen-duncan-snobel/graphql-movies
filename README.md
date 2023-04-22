@@ -2,6 +2,8 @@
 
 Deployed API url, https://clownfish-app-herbe.ondigitalocean.app/graphql
 
+View schema in explorer, https://studio.apollographql.com/public/owen-duncan-snobel/variant/main/home
+
 
 ## Installation
 Git clone this repository, ```https://github.com/owen-duncan-snobel/graphql-movies.git```
