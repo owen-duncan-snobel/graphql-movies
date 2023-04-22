@@ -2,6 +2,10 @@ import express, { Request, Response } from 'express'
 import { ApolloServer } from '@apollo/server'
 import { expressMiddleware } from '@apollo/server/express4'
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer'
+import { 
+  ApolloServerPluginLandingPageLocalDefault, 
+  ApolloServerPluginLandingPageProductionDefault 
+} from '@apollo/server/plugin/landingPage/default'
 import cors from 'cors'
 import http from 'http'
 import helmet from 'helmet'
@@ -20,7 +24,12 @@ const httpServer = http.createServer(app)
 const startServer = async () => {
   const server = new ApolloServer({
     schema,
-    plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],  
+    plugins: [
+      ApolloServerPluginDrainHttpServer({ httpServer }),
+      process.env.NODE_ENV === 'production' 
+        ? ApolloServerPluginLandingPageProductionDefault()
+        : ApolloServerPluginLandingPageLocalDefault({ embed: false})
+    ],  
     cache: new KeyvAdapter(new KeyV(REDIS_URL, { client: redisClient }))
   })
 
