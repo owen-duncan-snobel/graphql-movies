@@ -49,4 +49,5 @@ Dates returned from the server are in epoch milliseconds as a String
 1. Continue Unit + Integration tests for the services + resolvers
 2. Set up mocking for prisma + graphql 
 3. Postman collection for the queries and mutations
+4. Convert dates in the typeDefs from strings to timestampz / _ (Dates currently are passed as strings and converted to dates to be stored in db. On the way out of db they are converted to epoch timestamps)
 
